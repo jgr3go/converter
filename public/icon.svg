@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" shape-rendering="geometricPrecision">
+  <rect width="512" height="512" fill="#ffffff"/>
+
+  <!-- Canadian flag (left half) -->
+  <rect x="0" y="0" width="64" height="512" fill="#d52b1e"/>
+  <rect x="192" y="0" width="64" height="512" fill="#d52b1e"/>
+  <!-- Stylized maple leaf -->
+  <path d="M 128 150
+           L 144 198 L 180 188 L 168 232
+           L 208 244 L 180 268 L 212 310
+           L 162 298 L 156 346 L 128 326
+           L 100 346 L 94 298 L 44 310
+           L 76 268 L 48 244 L 88 232
+           L 76 188 L 112 198 Z"
+        fill="#d52b1e"/>
+
+  <!-- US flag (right half): 13 stripes + canton with stars -->
+  <g fill="#b22234">
+    <rect x="256" y="0"     width="256" height="39.4"/>
+    <rect x="256" y="78.8"  width="256" height="39.4"/>
+    <rect x="256" y="157.5" width="256" height="39.4"/>
+    <rect x="256" y="236.3" width="256" height="39.4"/>
+    <rect x="256" y="315.1" width="256" height="39.4"/>
+    <rect x="256" y="393.8" width="256" height="39.4"/>
+    <rect x="256" y="472.6" width="256" height="39.4"/>
+  </g>
+  <rect x="256" y="0" width="120" height="275.7" fill="#3c3b6e"/>
+  <g fill="#ffffff">
+    <circle cx="280" cy="22"  r="6"/><circle cx="304" cy="22"  r="6"/><circle cx="328" cy="22"  r="6"/><circle cx="352" cy="22"  r="6"/>
+    <circle cx="292" cy="52"  r="6"/><circle cx="316" cy="52"  r="6"/><circle cx="340" cy="52"  r="6"/><circle cx="364" cy="52"  r="6"/>
+    <circle cx="280" cy="82"  r="6"/><circle cx="304" cy="82"  r="6"/><circle cx="328" cy="82"  r="6"/><circle cx="352" cy="82"  r="6"/>
+    <circle cx="292" cy="112" r="6"/><circle cx="316" cy="112" r="6"/><circle cx="340" cy="112" r="6"/><circle cx="364" cy="112" r="6"/>
+    <circle cx="280" cy="142" r="6"/><circle cx="304" cy="142" r="6"/><circle cx="328" cy="142" r="6"/><circle cx="352" cy="142" r="6"/>
+    <circle cx="292" cy="172" r="6"/><circle cx="316" cy="172" r="6"/><circle cx="340" cy="172" r="6"/><circle cx="364" cy="172" r="6"/>
+    <circle cx="280" cy="202" r="6"/><circle cx="304" cy="202" r="6"/><circle cx="328" cy="202" r="6"/><circle cx="352" cy="202" r="6"/>
+    <circle cx="292" cy="232" r="6"/><circle cx="316" cy="232" r="6"/><circle cx="340" cy="232" r="6"/><circle cx="364" cy="232" r="6"/>
+    <circle cx="280" cy="262" r="6"/><circle cx="304" cy="262" r="6"/><circle cx="328" cy="262" r="6"/><circle cx="352" cy="262" r="6"/>
+  </g>
+</svg>
