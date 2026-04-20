@@ -4,14 +4,20 @@
     <div class="pair">
       <div class="field">
         <label>CAD</label>
-        <input type="number" step="any" inputmode="decimal" v-select-on-focus
-          :value="cad" @input="onCad($event.target.value)" :disabled="!rate" />
+        <div class="input-wrap">
+          <input type="number" step="any" inputmode="decimal" v-select-on-focus
+            :value="cad" @input="onCad($event.target.value)" :disabled="!rate" />
+          <span class="prefix">$</span>
+        </div>
       </div>
       <span class="arrow">&harr;</span>
       <div class="field">
         <label>USD</label>
-        <input type="number" step="any" inputmode="decimal" v-select-on-focus
-          :value="usd" @input="onUsd($event.target.value)" :disabled="!rate" />
+        <div class="input-wrap">
+          <input type="number" step="any" inputmode="decimal" v-select-on-focus
+            :value="usd" @input="onUsd($event.target.value)" :disabled="!rate" />
+          <span class="prefix">$</span>
+        </div>
       </div>
     </div>
     <div class="rate">

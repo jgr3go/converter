@@ -58,7 +58,7 @@ h1 {
   gap: 6px;
   background: var(--card);
   border: 1px solid var(--border);
-  color: var(--muted);
+  color: var(--text);
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 13px;
@@ -68,7 +68,6 @@ h1 {
   -webkit-tap-highlight-color: transparent;
 }
 .swap:active { background: var(--border); }
-.swap .on { color: var(--text); }
 .swap .swap-arrow {
   font-size: 12px;
   opacity: 0.6;
@@ -132,6 +131,21 @@ h1 .logo {
   text-align: center;
   -moz-appearance: textfield;
 }
+.input-wrap {
+  position: relative;
+}
+.input-wrap .prefix {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 500;
+  pointer-events: none;
+  user-select: none;
+}
+.input-wrap:has(input:disabled) .prefix { opacity: 0.5; }
 .field input::-webkit-outer-spin-button,
 .field input::-webkit-inner-spin-button {
   -webkit-appearance: none;

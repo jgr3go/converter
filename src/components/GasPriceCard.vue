@@ -3,15 +3,21 @@
     <h2>Gas Price</h2>
     <div class="pair">
       <div class="field">
-        <label>¢ CAD / litre</label>
-        <input type="number" step="any" inputmode="decimal" v-select-on-focus
-          :value="cadC" @input="onCadC($event.target.value)" :disabled="!rate" />
+        <label>CAD / litre</label>
+        <div class="input-wrap">
+          <input type="number" step="any" inputmode="decimal" v-select-on-focus
+            :value="cadC" @input="onCadC($event.target.value)" :disabled="!rate" />
+          <span class="prefix">¢</span>
+        </div>
       </div>
       <span class="arrow">&harr;</span>
       <div class="field">
         <label>USD / gallon</label>
-        <input type="number" step="any" inputmode="decimal" v-select-on-focus
-          :value="usdG" @input="onUsdG($event.target.value)" :disabled="!rate" />
+        <div class="input-wrap">
+          <input type="number" step="any" inputmode="decimal" v-select-on-focus
+            :value="usdG" @input="onUsdG($event.target.value)" :disabled="!rate" />
+          <span class="prefix">$</span>
+        </div>
       </div>
     </div>
     <div class="rate">

@@ -5,9 +5,9 @@
       {{ caLeft ? 'CA' : 'US' }} &harr; {{ caLeft ? 'US' : 'CA' }} Convert
     </h1>
     <button class="swap" @click="toggle" aria-label="Swap input order">
-      <span :class="{ on: caLeft }">CA</span>
+      <span>{{ caLeft ? 'CA' : 'US' }}</span>
       <span class="swap-arrow">&harr;</span>
-      <span :class="{ on: !caLeft }">US</span>
+      <span>{{ caLeft ? 'US' : 'CA' }}</span>
     </button>
   </header>
 
