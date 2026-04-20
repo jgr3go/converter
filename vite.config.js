@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => ({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.svg'],
+      includeAssets: ['icon.svg', 'apple-touch-icon.png'],
       manifest: {
         name: 'CA \u2194 US Convert',
         short_name: 'Convert',
@@ -21,9 +21,10 @@ export default defineConfig(({ command }) => ({
         start_url: '.',
         scope: '.',
         icons: [
-          { src: 'icon.svg', sizes: '192x192', type: 'image/svg+xml', purpose: 'any' },
-          { src: 'icon.svg', sizes: '512x512', type: 'image/svg+xml', purpose: 'any' },
-          { src: 'icon.svg', sizes: '512x512', type: 'image/svg+xml', purpose: 'maskable' }
+          { src: 'icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+          { src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+          { src: 'icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          { src: 'icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' }
         ]
       },
       workbox: {

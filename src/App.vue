@@ -11,6 +11,8 @@
     </button>
   </header>
 
+  <InstallPrompt />
+
   <div :class="{ 'us-left': !caLeft }">
     <BiConverter
       title="Temperature"
@@ -45,6 +47,7 @@ import BiConverter from './components/BiConverter.vue'
 import PaceCard from './components/PaceCard.vue'
 import CurrencyCard from './components/CurrencyCard.vue'
 import GasPriceCard from './components/GasPriceCard.vue'
+import InstallPrompt from './components/InstallPrompt.vue'
 import { useSideOrder } from './composables/useSideOrder.js'
 
 const { caLeft, toggle } = useSideOrder()
