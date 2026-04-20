@@ -2,7 +2,7 @@
   <header class="top">
     <h1>
       <img class="logo" src="/icon.svg" alt="" />
-      CA &harr; US Convert
+      {{ caLeft ? 'CA' : 'US' }} &harr; {{ caLeft ? 'US' : 'CA' }} Convert
     </h1>
     <button class="swap" @click="toggle" aria-label="Swap input order">
       <span :class="{ on: caLeft }">CA</span>
