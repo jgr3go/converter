@@ -31,6 +31,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { onResume } from '../composables/useResetOnResume.js'
 
 const props = defineProps({
   title: String,
@@ -64,4 +65,6 @@ function onRight(v) {
   const n = parseFloat(v)
   left.value = Number.isFinite(n) ? fmt(props.backward(n)) : ''
 }
+
+onResume(() => { left.value = ''; right.value = '' })
 </script>

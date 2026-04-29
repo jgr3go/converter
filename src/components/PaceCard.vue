@@ -33,6 +33,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { onResume } from '../composables/useResetOnResume.js'
 
 const KM_PER_MI = 1.609344
 const MAX_DIGITS = 5 // up to 999:99
@@ -80,4 +81,6 @@ function onMi(raw) {
   const total = digitsToSec(miDigits.value)
   kmDigits.value = total === null ? '' : secToDigits(total / KM_PER_MI)
 }
+
+onResume(() => { kmDigits.value = ''; miDigits.value = '' })
 </script>

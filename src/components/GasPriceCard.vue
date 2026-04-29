@@ -30,6 +30,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useCurrencyRate } from '../composables/useCurrencyRate.js'
+import { onResume } from '../composables/useResetOnResume.js'
 
 const L_PER_GAL = 3.78541
 const { rate } = useCurrencyRate()
@@ -74,4 +75,6 @@ watch(rate, () => {
   if (lastEdit.value === 'cadC') onCadC(cadC.value)
   else onUsdG(usdG.value)
 })
+
+onResume(() => { cadC.value = ''; usdG.value = '' })
 </script>
