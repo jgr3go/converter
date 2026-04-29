@@ -15,17 +15,6 @@
 
   <div :class="{ 'us-left': !caLeft }">
     <BiConverter
-      title="Temperature"
-      left-label="Celsius"
-      right-label="Fahrenheit"
-      left-unit="°C"
-      right-unit="°F"
-      :forward="c => c * 9 / 5 + 32"
-      :backward="f => (f - 32) * 5 / 9"
-      :decimals="1"
-    />
-
-    <BiConverter
       title="Distance"
       left-label="Kilometres"
       right-label="Miles"
@@ -37,6 +26,29 @@
     />
 
     <PaceCard />
+
+    <BiConverter
+      title="Weight"
+      left-label="Kilograms"
+      right-label="Pounds"
+      left-unit="kg"
+      right-unit="lb"
+      :forward="kg => kg * 2.2046226218487757"
+      :backward="lb => lb / 2.2046226218487757"
+      :decimals="2"
+    />
+
+    <BiConverter
+      title="Temperature"
+      left-label="Celsius"
+      right-label="Fahrenheit"
+      left-unit="°C"
+      right-unit="°F"
+      :forward="c => c * 9 / 5 + 32"
+      :backward="f => (f - 32) * 5 / 9"
+      :decimals="1"
+    />
+
     <CurrencyCard />
     <GasPriceCard />
   </div>
