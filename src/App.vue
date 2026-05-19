@@ -47,7 +47,11 @@
       :forward="c => c * 9 / 5 + 32"
       :backward="f => (f - 32) * 5 / 9"
       :decimals="1"
-    />
+    >
+      <div class="rate" v-if="locTempC !== null">
+        <span>{{ locLocation || 'Current location' }} &middot; {{ locTempC.toFixed(1) }}°C / {{ (locTempC * 9 / 5 + 32).toFixed(1) }}°F</span>
+      </div>
+    </BiConverter>
 
     <CurrencyCard />
     <GasPriceCard />
@@ -61,6 +65,8 @@ import CurrencyCard from './components/CurrencyCard.vue'
 import GasPriceCard from './components/GasPriceCard.vue'
 import InstallPrompt from './components/InstallPrompt.vue'
 import { useSideOrder } from './composables/useSideOrder.js'
+import { useLocationTemperature } from './composables/useLocationTemperature.js'
 
 const { caLeft, toggle } = useSideOrder()
+const { tempC: locTempC, location: locLocation } = useLocationTemperature()
 </script>
