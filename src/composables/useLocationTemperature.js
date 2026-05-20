@@ -70,8 +70,10 @@ async function refresh() {
 }
 
 const isStale = !fetchedAt.value || (Date.now() - fetchedAt.value) > STALE_AFTER
+const isReload = typeof performance !== 'undefined'
+  && performance.getEntriesByType?.('navigation')[0]?.type === 'reload'
 const online = typeof navigator === 'undefined' ? true : navigator.onLine !== false
-if (isStale && online) refresh()
+if ((isStale || isReload) && online) refresh()
 
 export function useLocationTemperature() {
   return { tempC, location, fetchedAt, loading, error, refresh }
